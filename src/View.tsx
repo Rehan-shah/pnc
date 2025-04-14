@@ -50,14 +50,14 @@ export default function View({ state }: { state: "permutations" | "combinations"
             return
         }
 
-        function com(n, r) {
+        function com(n: number, r: number) {
 
             return factorial(n) / (factorial(n - r) * factorial(r))
         }
 
 
 
-        function per(n, r) {
+        function per(n: number, r: number) {
 
             return factorial(n) / (factorial(n - r))
         }
@@ -73,11 +73,11 @@ export default function View({ state }: { state: "permutations" | "combinations"
     return (
         <div>
             < div className='font-serif flex align-middle ' >
-                <input value={n?.toString()} onChange={e => setN(Number(e.target.value))} autoFocus type="number" placeholder={5} className='w-40 borders-none focus:outline-none text-5xl text-right mb-[10rem]' />
+                <input value={n?.toString()} onChange={e => setN(Number(e.target.value))} autoFocus type="number" placeholder={"5"} className='w-40 borders-none focus:outline-none text-5xl text-right mb-[10rem]' />
 
                 <h1 className='text-[15rem]'>{state === "combinations" ? "C" : "P"}</h1>
 
-                <input value={r?.toString()} onChange={e => setR(Number(e.target.value))} autoFocus type="number" placeholder={2} className='w-40 borders-none focus:outline-none text-5xl text-left p-0 mt-[10rem]' />
+                <input value={r?.toString()} onChange={e => setR(Number(e.target.value))} autoFocus type="number" placeholder={"2"} className='w-40 borders-none focus:outline-none text-5xl text-left p-0 mt-[10rem]' />
                 <h1 className='text-[15rem] text-left font-serif'>=</h1>
 
                 <Ansbox >{res}</Ansbox>
