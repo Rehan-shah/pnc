@@ -102,7 +102,7 @@ export default function View({ state }: { state: "permutations" | "combinations"
                 {showTable ? "Hide Table" : "Show Full Table"}
             </button>
 
-            {!showTable && <Table n={n} state={state} />}
+            {showTable && <Table n={n} state={state} />}
         </div >
     )
 }
