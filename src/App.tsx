@@ -10,8 +10,8 @@ function App() {
 
 
     return (
-        <>
-            <Tabs defaultValue="combinations" className="w-7xl mx-auto font-mono">
+        <div className=' w-[100vw]'>
+            <Tabs defaultValue="combinations" className="font-mono p-10">
                 <TabsList className="mx-auto" >
                     <TabsTrigger className="text-2xl p-4" value="combinations">Combinations</TabsTrigger>
                     <TabsTrigger className="text-2xl p-4" value="permutations">Permutations</TabsTrigger>
@@ -24,7 +24,11 @@ function App() {
                 </TabsContent>
             </Tabs>
 
-        </>
+            <footer className="fixed bottom-0 w-full text-center text-sm text-gray-500 py-4 bg-white border-t">
+                © Rehan Shah 2025
+            </footer>
+
+        </div>
     )
 }
 
